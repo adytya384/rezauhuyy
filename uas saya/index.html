@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT Automobil</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa; /* Warna latar belakang */
+            padding-top: 70px; /* Padding atas untuk navbar */
+        }
+        .navbar {
+            background-color: #343a40; /* Warna latar belakang navbar */
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: #ffffff; /* Warna teks */
+            font-weight: bold; /* Font tebal */
+        }
+        .navbar-toggler {
+            border-color: #ffffff; /* Warna border toggler */
+        }
+        .navbar-toggler-icon {
+            background-color: #ffffff; /* Warna ikon toggler */
+        }
+        .jumbotron {
+            background-color: rgba(255, 255, 255, 0.9); /* Warna latar belakang dengan transparansi */
+            color: #343a40; /* Warna teks */
+            padding: 2rem;
+            margin-top: 100px; /* Sesuaikan dengan tinggi navbar */
+            border-radius: 0.5rem; /* Corner radius */
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Shadow */
+        }
+        .btn-custom {
+            background-color: #dc3545; /* Warna latar belakang tombol */
+            color: #ffffff; /* Warna teks tombol */
+            border: none; /* Hapus border */
+            padding: 10px 20px; /* Padding tombol */
+            font-weight: bold; /* Font tebal */
+            transition: background-color 0.3s;
+        }
+        .btn-custom:hover {
+            background-color: #c82333; /* Warna latar belakang tombol saat hover */
+            color: #ffffff; /* Warna teks tombol saat hover */
+        }
+        .card {
+            background-color: #ffffff; /* Warna latar belakang card */
+            border: none; /* Hapus border */
+            border-radius: 0.5rem; /* Corner radius */
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Shadow */
+            transition: box-shadow 0.3s;
+        }
+        .card:hover {
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1); /* Shadow saat hover */
+        }
+        /* CSS untuk gambar katalog */
+        .catalog-img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">PT Automobil</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home-section">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-section">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services-section">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-section">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <!-- Tombol Contact Us yang menampilkan modal -->
+                        <button class="nav-link btn btn-custom" data-toggle="modal" data-target="#contactModal">Contact Us</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header dengan animasi gelombang -->
+    <div id="home-section" class="header">
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="display-4">Welcome to PT Automobil</h1>
+                <p class="lead">We are committed to providing high-quality automotive solutions.</p>
+                <hr class="my-4">
+                <p>Established in [year], PT Automobil has been at the forefront of the automotive industry, delivering excellence in...</p>
+                <!-- Tombol katalog gambar mobil -->
+                <div class="row text-center">
+                    <div class="col-md-4 mb-3">
+                        <a class="btn btn-custom btn-lg btn-block" href="#" role="button" style="background: url('catalog1.jpg'); background-size: cover;">View Car Catalog 1</a>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <a class="btn btn-custom btn-lg btn-block" href="#" role="button" style="background: url('catalog2.jpg'); background-size: cover;">View Car Catalog 2</a>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <a class="btn btn-custom btn-lg btn-block" href="#" role="button" style="background: url('catalog3.jpg'); background-size: cover;">View Car Catalog 3</a>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <a class="btn btn-custom btn-lg btn-block" href="#" role="button" style="background: url('catalog4.jpg'); background-size: cover;">View Car Catalog 4</a>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <a class="btn btn-custom btn-lg btn-block" href="#" role="button" style="background: url('catalog5.jpg'); background-size: cover;">View Car Catalog 5</a>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <a class="btn btn-custom btn-lg btn-block" href="#" role="button" style="background: url('catalog6.jpg'); background-size: cover;">View Car Catalog 6</a>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                        <a class="btn btn-custom btn-lg btn-block" href="#" role="button" style="background: url('catalog7.jpg'); background-size: cover;">View Car Catalog 7</a>
+                    </div>
+                </div>
+                <!-- Tombol View Catalog -->
+                <div class="text-center mt-5">
+                    <button class="btn btn-primary btn-lg" onclick="showCatalog()">View Catalog</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Div untuk menampilkan katalog -->
+    <div id="catalog-section" class="jumbotron" style="display: none;">
+        <div class="container">
+            <h1 class="display-4">Car Catalog</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <img src="catalog1.jpeg" alt="Catalog 1" class="catalog-img">
+                </div>
+                <div class="col-md-4">
+                    <img src="catalog2.jpeg" alt="Catalog 2" class="catalog-img">
+                </div>
+                <div class="col-md-4">
+                    <img src="catalog3.jpeg" alt="Catalog 3" class="catalog-img">
+                </div>
+                <div class="col-md-4">
+                    <img src="catalog4.jpeg" alt="Catalog 4" class="catalog-img">
+                </div>
+                <div class="col-md-4">
+                    <img src="catalog5.jpeg" alt="Catalog 5" class="catalog-img">
+                </div>
+                <div class="col-md-4">
+                    <img src="catalog6.jpeg" alt="Catalog 6" class="catalog-img">
+                </div>
+                <div class="col-md-4">
+                    <img src="catalog7.jpeg" alt="Catalog 7" class="catalog-img">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about-section" class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">About PT Automobil</h1>
+            <p class="lead">Learn more about PT Automobil.</p>
+            <hr class="my-4">
+            <p>PT Automobil was founded with a vision to revolutionize the automotive industry. Since [year], we have been dedicated to...</p>
+            <a class="btn btn-custom btn-lg" href="#" role="button">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Services Section with Accordion -->
+    <div id="services-section" class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Our Services</h1>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Oil Change</h5>
+                            <p class="card-text">Regular oil changes help maintain engine health and performance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Spare Parts Sales</h5>
+                            <p class="card-text">We offer a wide range of high-quality spare parts for various vehicle models.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Service: Jual Beli Mobil -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Jual Beli Mobil</h5>
+                            <p class="card-text">We buy and sell a variety of vehicles, ensuring fair prices and quality service.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- New Service: Ganti Oli -->
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Ganti Oli</h5>
+                            <p class="card-text">Expert oil change services to keep your engine running smoothly.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add more services as needed -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact-section" class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">Contact Us</h1>
+            <p class="lead">Feel free to reach out to us for any inquiries.</p>
+            <hr class="my-4">
+            <p>For immediate assistance, contact us via WhatsApp:</p>
+            <p><strong>WhatsApp:</strong> <a href="https://wa.me/83131722928">83131722928</a></p>
+        </div>
+    </div>
+
+    <!-- Modal for Contact -->
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact PT Automobil</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>For immediate assistance, contact us via WhatsApp:</p>
+                    <p><strong>WhatsApp:</strong> <a href="https://wa.me/083131722928">083131722928</a></p>
+                    <p><strong>Address:</strong> Jl.Masbagik- Pancor lombok Timur </p>
+                    <p><strong>Open in Google Maps:</strong> <a href="https://www.google.com/maps/search/?api=1&query=Jl.Mabagik -Pancor Lombok Timur +" target="_blank">Click here</a></p>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript untuk menampilkan dan menyembunyikan katalog -->
+    <script>
+        function showCatalog() {
+            var catalogSection = document.getElementById('catalog-section');
+            catalogSection.style.display = 'block';
+            
+            // Scroll ke bagian katalog
+            catalogSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
