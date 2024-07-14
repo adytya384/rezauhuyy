@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Portofolio Saya</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .animate-fadeIn {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .profile-image {
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .profile-image:hover {
+            transform: scale(1.1);
+        }
+
+        .skill-image {
+            width: 100px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            filter: grayscale(100%);
+            transition: filter 0.3s;
+        }
+
+        .skill-image:hover {
+            filter: grayscale(0%);
+            animation: wave-animation 1.5s ease infinite;
+        }
+
+        @keyframes wave-animation {
+            0% { filter: grayscale(100%) brightness(1); }
+            50% { filter: grayscale(50%) brightness(2); }
+            100% { filter: grayscale(100%) brightness(1); }
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .footer-wave {
+            animation: wave 2s infinite;
+        }
+
+        .footer-wave-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        body {
+            background: linear-gradient(to right, #85d7ff, #ffffff);
+        }
+
+        header {
+            background-color: #005f99;
+        }
+
+        footer {
+            background-color: #003d66;
+        }
+
+        a {
+            color: #ffffff;
+        }
+
+        a:hover {
+            color: #85d7ff;
+        }
+
+        .bg-gray-100 {
+            background-color: #e1f5fe;
+        }
+
+        h2, h3 {
+            color: #003d66;
+        }
+
+        p {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header class="p-5 shadow-lg">
+        <h1 class="text-5xl font-extrabold text-center tracking-tight text-black-800">Portofolio Saya</h1>
+        <nav class="mt-4">
+            <ul class="flex justify-center space-x-8">
+                <li><a href="#home" class="hover:text-blue-300 transition font-bold">Home</a></li>
+                <li><a href="#projects" class="hover:text-blue-300 transition font-bold" onclick="showProjects()">Proyek</a></li>
+                <li><a href="https://wa.me/83131722928" target="_blank" class="hover:text-blue-300 transition font-bold">Kontak Saya</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container mx-auto p-5 relative">
+        <section id="home" class="text-center mt-8 relative z-10">
+            <div class="bg-gray-100 p-5 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
+                <img src="pictme.jpeg.jpg" alt="Foto Saya" class="profile-image mx-auto mb-4">
+                <h2 class="text-3xl font-bold mb-2">Muhammad Aditya Reiza Rahman</h2>
+                <p class="mb-4">
+                    Selamat datang di portofolio saya! Saya adalah seorang <strong>programmer</strong> yang berfokus pada pengembangan web dan aplikasi. Dengan pengalaman dalam berbagai bahasa pemrograman dan teknologi modern, saya berdedikasi untuk menciptakan solusi yang inovatif dan fungsional.
+                    Di sini, Anda akan menemukan proyek-proyek yang telah saya kerjakan. Terima kasih telah mengunjungi portofolio saya!
+                </p>
+            </div>
+        </section>
+
+        <section id="skills" class="mt-10 text-center">
+            <h2 class="text-3xl font-bold mb-4">Keahlian Saya</h2>
+            <p class="mb-4">Berikut adalah beberapa bahasa pemrograman yang saya kuasai:</p>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="skill-item">
+                    <img src="js.jpeg" alt="JavaScript" class="skill-image">
+                    <p>JavaScript</p>
+                </div>
+                <div class="skill-item">
+                    <img src="image py.jpeg" alt="Python" class="skill-image">
+                    <p>Python</p>
+                </div>
+                <div class="skill-item">
+                    <img src="html css.jpeg" alt="HTML & CSS" class="skill-image">
+                    <p>HTML & CSS</p>
+                </div>
+                <div class="skill-item">
+                    <img src="php.jpeg" alt="PHP" class="skill-image">
+                    <p>PHP</p>
+                </div>
+                <div class="skill-item">
+                    <img src="java.jpeg" alt="Java" class="skill-image">
+                    <p>Java</p>
+                </div>
+                <div class="skill-item">
+                    <img src="ruby.jpeg" alt="Ruby" class="skill-image">
+                    <p>Ruby</p>
+                </div>
+                <div class="skill-item">
+                    <img src="sql.jpeg" alt="SQL" class="skill-image">
+                    <p>SQL</p>
+                </div>
+                <div class="skill-item">
+                    <img src="react.jpeg" alt="React" class="skill-image">
+                    <p>React</p>
+                </div>
+                <div class="skill-item">
+                    <img src="nodejs.png" alt="Node.js" class="skill-image">
+                    <p>Node.js</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects" class="mt-10 hidden">
+            <h2 class="text-3xl font-bold text-center mb-4 text-white">Proyek Saya</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gray-100 p-5 shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl animate-fadeIn">
+                    <img src="images/proyek1.jpg" alt="Proyek 1" class="w-full h-40 object-cover rounded-t-lg transition-transform duration-300 hover:scale-110">
+                    <h3 class="text-xl font-semibold mt-2">Proyek 1</h3>
+                    <p>Deskripsi singkat tentang proyek ini.</p>
+                </div>
+                <div class="bg-gray-100 p-5 shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl animate-fadeIn">
+                    <img src="images/proyek2.jpg" alt="Proyek 2" class="w-full h-40 object-cover rounded-t-lg transition-transform duration-300 hover:scale-110">
+                    <h3 class="text-xl font-semibold mt-2">Proyek 2</h3>
+                    <p>Deskripsi singkat tentang proyek ini.</p>
+                </div>
+                <div class="bg-gray-100 p-5 shadow-lg rounded-lg transition-transform transform hover:scale-105 hover:shadow-xl animate-fadeIn">
+                    <img src="images/proyek3.jpg" alt="Proyek 3" class="w-full h-40 object-cover rounded-t-lg transition-transform duration-300 hover:scale-110">
+                    <h3 class="text-xl font-semibold mt-2">Proyek 3</h3>
+                    <p>Deskripsi singkat tentang proyek ini.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-white p-5 text-center mt-10">
+            <div class="footer-wave-container">
+                <img src="garuda.jpeg" alt="Lambang Indonesia" class="mx-auto mb-2 w-24 h-24 footer-wave">
+            </div>
+            <p>&copy; 2023 Portofolio Saya</p>
+        </footer>
+    </main>
+
+    <script>
+        document.querySelectorAll('.skill-image').forEach(image => {
+            image.addEventListener('click', () => {
+                alert(`Anda mengklik ${image.alt}`);
+            });
+        });
+
+        function showProjects() {
+            document.getElementById('projects').classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

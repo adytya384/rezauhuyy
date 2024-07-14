@@ -1,0 +1,104 @@
+/* styles.css */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.profile-image {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.profile-image:hover {
+  transform: scale(1.1);
+}
+
+.skill-image {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+
+.skill-image:hover {
+  filter: grayscale(0%);
+  animation: wave-animation 1.5s ease infinite;
+}
+
+@keyframes wave-animation {
+  0% {
+      filter: grayscale(100%) brightness(1);
+  }
+  50% {
+      filter: grayscale(50%) brightness(2);
+  }
+  100% {
+      filter: grayscale(100%) brightness(1);
+  }
+}
+
+@keyframes wave {
+  0%, 100% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-10px);
+  }
+}
+
+.footer-wave {
+  animation: wave 2s infinite;
+}
+
+.footer-wave-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+body {
+  background: linear-gradient(to right, #85d7ff, #ffffff);
+}
+
+header {
+  background-color: #005f99;
+}
+
+footer {
+  background-color: #003d66;
+}
+
+a {
+  color: #ffffff;
+}
+
+a:hover {
+  color: #85d7ff;
+}
+
+.bg-gray-100 {
+  background-color: #e1f5fe;
+}
+
+h2, h3 {
+  color: #003d66;
+}
+
+p {
+  color: #333;
+}
